@@ -10,8 +10,8 @@ var server = http.createServer(function(req, res) {
 });
   
 socketio.listen(server).on('connection', function (socket) {
-    socket.on('message', function (msg) {
+    socket.on('aaa', function (msg) {
         console.log('Message Received: ', msg);
-        socket.broadcast.emit('message', msg);
+        socket.broadcast.emit('asd', msg);
     });
 });
